@@ -1,0 +1,18 @@
+@import "susy",
+        "breakpoint",
+        "partials/normalize.3.0.2",
+        "partials/variables",
+        "partials/functions-mixins",
+        "partials/grid",
+        "partials/typography",
+        "partials/modules",
+        "partials/form",
+        "partials/header",
+        "partials/navigation",
+        "partials/footer",
+        "partials/layout",
+        "partials/theme",
+        "../icons/icons.data.svg.scss"; //uncomment if you are using grunticon;
+
+// ie 7 + 8 icons are in style-nomq.scss
+

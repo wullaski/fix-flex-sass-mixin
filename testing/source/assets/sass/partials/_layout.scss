@@ -1,0 +1,17 @@
+// ----------------------------------------------------------
+// layout
+// ----------------------------------------------------------
+
+.red {
+	background-color: red;
+	padding: 2rem;
+}
+
+.yellow {
+	background-color: yellow;
+	padding: 2rem;
+}
+
+.fix-flex {
+	@include fix-flex('left',400px,.5rem);
+}
