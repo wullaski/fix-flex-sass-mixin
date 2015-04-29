@@ -1,0 +1,38 @@
+/*
+	$fix-direction is either 'left' or 'right'
+	$fix-width and $fix-margin can use rem, em or px
+*/
+
+@mixin fix-cell($fix-direction,$fix-width) {
+  width: $fix-width;
+  display: block;
+  max-width: none;
+}
+
+@mixin flex-cell {
+  display: table-cell;
+  width: 100%;
+  vertical-align: top;
+}
+
+@mixin fix-flex($fix-direction,$fix-width,$fix-margin) {
+  display: table;
+  width: 100%;
+  @if $fix-direction == 'left' {
+    & > :first-child {
+      @include fix-cell($fix-direction,$fix-width);
+      margin-right: $fix-margin;
+    }
+    & > :last-child {
+      @include flex-cell;
+    }
+  } @else {
+    & > :first-child {
+      @include flex-cell;
+    }
+    & > :last-child {
+      @include fix-cell($fix-direction,$fix-width);
+      margin-left: $fix-margin;
+    }
+  }
+}
